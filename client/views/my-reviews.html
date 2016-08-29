@@ -1,0 +1,18 @@
+<section class="form-group">
+  <article class="cols col7" ng-repeat="r in reviews.slice().reverse()">
+    <div class="form-group">
+      <header>
+        <div class="cols col12"><h1>{{r.date | date}} | </h1></div>
+        <div class="cols col12"><h1>{{r.coffeeShop.name}}</h1></div>
+        <h2>{{r.reviewer.email}}</h2>
+      </header>
+      <div class="image"><img src="{{r.coffeeShop.logo}}" alt="{{r.coffeeShop.name}}"></div>
+      <p>{{r.rating}}&#9733; - {{r.comments}}</p>
+    </div>
+
+    <div class="actions" ng-show="currentUser">
+      <button ui-sref="edit-review({ id: r.id })">Edit</button>
+      <button a ui-sref="delete-review({ id: r.id })">Delete</button>
+    </div>
+  </article>
+</section>

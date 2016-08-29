@@ -1,0 +1,19 @@
+<section>
+    <form name="form" ng-submit="submitForm()">
+        <fieldset>
+            <legend>User cabinet</legend>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" disabled="disabled" value="{{reviewer.email}}">
+                <label>Avatar</label>
+                <div class="image"><img src="{{reviewer.avatar}}"><div>
+                <label>Avatar url</label>
+                <input type="text" ng-model="reviewer.avatar">
+            </div>
+
+            <div class="actions">
+                <button>Save changes</button>
+            </div>
+        </fieldset>
+    </form>
+<section>
